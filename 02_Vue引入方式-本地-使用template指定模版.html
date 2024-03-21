@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    的观点
+  </div>
+  
+  <script src="./lib/vue.js"></script>
+  <script>
+    
+    // 1.创建app
+    const app = Vue.createApp({
+      template: `<h1>Hello Vue</h1>`
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+
+    //3.最终template指定的内容替换了<div id="app">里面的内容，注意是里面的内容，<div id="app">还存在
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <div>{{counter}}</div>
+    <button @click="increment">增加</button>
+  </div>
+  
+  <script src="./lib/vue.js"></script>
+  <script>
+    
+    // 1.创建app，没有使用template，而是<div id="app">里面的内容就是template
+    const app = Vue.createApp({
+      //vue3中data只能是函数，Vue2中主组件可以不是函数？
+      data:function(){
+        return {
+          counter:123
+        }
+      },
+      //函数不可以是箭头函数，如果是箭头函数，其中的this就只想window了
+      methods:{
+        increment:function(){
+          this.counter++
+        }
+      }
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+
+  </script>
+
+</body>
+</html>

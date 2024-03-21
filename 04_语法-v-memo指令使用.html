@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div v-memo="[name, age]">
+      <h2>姓名: {{ name }}</h2>
+      <h2>年龄: {{ age }}</h2>
+      <h2>身高: {{ height }}</h2>
+    </div>
+    <button @click="updateInfo">改变信息</button>
+  </div>
+  
+  <script src="./lib/vue.js"></script>
+  <script>
+    /**
+     v-memo指令：
+     https://cn.vuejs.org/api/built-in-directives.html#v-memo
+     只关心name和age的变化，如果这两个某一个发生变化都会触发这个元素或组件及其子组件的更新；如果这两个都没变化则这个元素或组件及其子组件都不会更新
+     
+     * 
+    */
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data: function() {
+        return {
+          name: "why",
+          age: 18,
+          height: 1.88
+        }
+      },
+
+      methods: {
+        updateInfo: function() {
+          // this.name = "kobe"
+          // this.age = 20
+          this.height = 2012
+        }
+      }
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>
