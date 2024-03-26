@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+
+    https://cn.vuejs.org/guide/essentials/list.html#array-change-detection
+
+    ◼ Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。
+◼ 这些被包裹过的方法包括：
+ push()
+ pop()
+ shift()
+ unshift()
+ splice()
+ sort()
+ reverse()
+◼ 替换数组的方法
+ 上面的方法会直接修改原来的数组；
+ 但是某些方法不会替换原来的数组，而是会生成新的数组，比如 filter()、concat() 和 slice()；这些方法都不能被监听；
+但是我们可以把这些方法的返回值赋值给原数组，就触发监听了
+
+   -->
+  <div id="app">
+    
+  </div>
+
+  <script src="./lib/vue.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data: function() {
+        return {
+          counter:10
+        }
+      },
+      methods: {
+
+      }
+    })
+
+    app.mount("#app")
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <!-- template这里不能单独使用，需要配合v-if, v-for等；或许在.vue文件中可以单独使用，留意下 -->
+    <!-- <template>内容</template> -->
+    <template v-if="true">
+      <div>大发国</div>
+      <div>次数：{{counter}}</div>
+    </template>
+  </div>
+
+  <script src="./lib/vue.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data: function() {
+        return {
+          counter:10
+        }
+      },
+      methods: {
+
+      }
+    })
+
+    app.mount("#app")
+  </script>
+</body>
+</html>
