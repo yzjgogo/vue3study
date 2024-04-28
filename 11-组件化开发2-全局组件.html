@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .product {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <product-item></product-item>
+    
+    <product-item></product-item>
+
+    <product-item></product-item>
+  </div>
+
+  <!-- 组件product-item的模板 -->
+  <template id="item">
+    <div class="product">
+      <h2>我是商品</h2>
+      <div>商品图片</div>
+      <div>商品价格: <span>¥9.9</span></div>
+      <p>商品描述信息, 9.9秒杀</p>
+    </div>
+  </template>
+  
+  <script src="./lib/vue.js"></script>
+  <script>
+    /*
+      所谓全局组件，该组件可以在任意别的组件里使用，不同于子组件，只能在父组件里使用
+    */
+
+    // 1.创建根组件
+    const App = {}
+
+    // 2.创建app
+    const app = Vue.createApp(App)
+
+    // 3.定义一个全局组件
+    const productItem = {
+      template:"#item"
+    }
+
+    // 4.注册这个全局组件
+    app.component("product-item", productItem)
+    //你也可以定义的同时注册
+    // app.component("product-item", {
+    //   template: "#item"
+    // })
+
+    // 5.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>

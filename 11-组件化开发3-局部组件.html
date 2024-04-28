@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .product {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <product-item></product-item>
+    
+    <product-item></product-item>
+
+    <product-item></product-item>
+  </div>
+
+  <!-- 组件product-item的模板 -->
+  <template id="item">
+    <div class="product">
+      <h2>我是商品</h2>
+      <div>商品图片</div>
+      <div>商品价格: <span>¥9.9</span></div>
+      <p>商品描述信息, 9.9秒杀</p>
+    </div>
+  </template>
+  
+  <script src="./lib/vue.js"></script>
+  <script>
+    /*
+      所谓局部(子)组件：只能在它的父组件里使用的组件
+    */
+
+    // 1.定义一个局部组件
+    const productItem = {
+      template:"#item"
+    }
+
+    // 2.定义一个父组件或根组件，并指定其局部(子)组件为productItem,components用于指定在当前组件里定义的所有局部(子)组件
+    const App = {
+      components:{
+        productItem
+      }
+    }
+
+    // 3.创建根组件 或 父组件
+    const app = Vue.createApp(App)
+
+    // 4.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>
