@@ -1,9 +1,14 @@
+//jsconfig.json用于给vscode或webstrom编译器提供友好的代码提示的
 {
   "compilerOptions": {
+    // 最终打包出es5代码
     "target": "es5",
+    //代码中使用模块化规范，用es最新版本
     "module": "esnext",
+    //当前jsconfig.json同级目录下指定paths,src就与jsconfig.json同级
     "baseUrl": "./",
     "moduleResolution": "node",
+    //有了paths的配置，你在写代码时就有友好的代码提示了
     "paths": {
       // 这个本来就有
       "@/*": [

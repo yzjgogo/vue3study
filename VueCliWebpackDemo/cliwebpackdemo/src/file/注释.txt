@@ -1,0 +1,63 @@
+0
+vscode针对vue的插件：
+vetur: 对vue2有很友好的支持；对vue3的支持不友好；
+volar: 对vue3有很友好的支持，且现在在vscode已经搜不到了，因为已经更名为Vue-Official 成为vue3官方支持的了
+
+Vue3英文官网：
+vuejs.org
+
+Vue3中文官网有两个：
+v3.cn.vuejs.org
+staging-cn.vuejs.org (改为：https://cn.vuejs.org/)
+
+我们打算使用vue cli创建这个项目(这种创建方式是使用webpack作为构建打包工具，也可以使用vite作为构建打包工具,vite_demo就是vite项目)
+
+1：全局安装vue cli：
+npm install @vue/cli -g
+这个命令默认安装最新版 的@vue/cli
+
+2:安装好后查看vue cli版本：
+vue --verson
+你没看错，就是'vue --version'查看的是vue cli的版本
+
+3：如果需要我们也可以卸载vue cli:
+  npm uninstall @vue/cli -g
+
+4：开始创建项目：
+vue create xxx项目名称
+
+5：根据提示，一步步选择即可创建成功；
+
+6:创建项目完成后，我们 npm i  ->  npm run serve 看能否运行成功，
+如果运行失败，可以考虑是否你电脑里安装的node版本不匹配，使用nvm切换多个node版本试试能不能解决，如果不能再想别的办法
+
+7:jsconfig.json
+可以让vscode提供更友好的支持
+
+8：.browserslistrc
+浏览器的兼容情况
+
+9：vue.config.js
+可以配置webpack
+
+10:第一次npm run serve运行打开项目，F12看到console输出一个警告：
+Feature flag __VUE_PROD_HYDRATION_MISMATCH_DETAILS__ is not explicitly defined. You are running the esm-bundler build of Vue, which expects these compile-time feature flags to be globally injected via the bundler config in order to get better tree-shaking in the production bundle.
+不知道这个警告是不是必须解决，我用chatgpt得到的解决办法：VUE_PROD_HYDRATION_MISMATCH_DETAILS.md
+具体看：vue.config.js里的“__VUE_PROD_HYDRATION_MISMATCH_DETAILS__”相关，注意因为用到了new webpack，所以我也导入了const webpack = require('webpack')
+
+11：具体vue.config.js中怎么配置webpack的plugins：
+参考：cli配置webpack.md
+
+12：配置路径别名，需要配置webpack，即在vue.config.js中配置webpack的别名相关：
+    resolve: {
+      // 配置路径别名
+      // @是已经配置好的路径别名: 对应的是src路径
+      alias: {
+        "utils": "@/utils" 
+      }
+    }
+当前场景是，在\src\utils\abc\cba\nba\index.js中需要访问utils/math.js
+如果不在vue.config.js中做如上配置，则只能“import { sum } from "../../../math"” 这样导入，而不能直接“import { sum } from "utils/math"”这样导入，做了如上配置后，就可以这样导入了
+
+jsconfig.json里也有配置路径别名的位置，有啥区别，参考：jsconifg的路径别名.md
+区别就是：你在vue.config.js中使用webpack配置了路径别名，只能说有效可以这样写，但是编译器vscode不能识别，没有代码提示，在jsconfig.json配置后才会有代码提示。

@@ -1,0 +1,14 @@
+这个项目是用vite作为构建打包工具，不是webpack
+vite官网：https://vitejs.dev/
+
+项目构建流程：
+
+1：npm init vue@latest  @lastest表示安装最新版
+这个命令会提示你做两件事：1是提示你安装'create-vue'工具；2安装'create-vue'后会引导你一步步创建出一个项目；
+如果遇到执行npm init vue@latest命令时报错：TypeError: (0 , import_node_util.parseArgs) is not a function，这类错误大概率是因为node版本的问题，可以尝试用nvm切换或安装新版node
+
+2：安装完成后
+a:执行 npm install 安装所有依赖；
+b:执行 npm run dev 构建开发模式项目；
+c:执行 npm run build 打包
+(参考：package.json)
