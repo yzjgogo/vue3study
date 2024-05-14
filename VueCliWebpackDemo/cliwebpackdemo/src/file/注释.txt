@@ -1,7 +1,11 @@
 0
+插件：
 vscode针对vue的插件：
 vetur: 对vue2有很友好的支持；对vue3的支持不友好；
 volar: 对vue3有很友好的支持，且现在在vscode已经搜不到了，因为已经更名为Vue-Official 成为vue3官方支持的了
+
+老师讲vue3时的插件：
+路径自动补全插件：Path Intellisense
 
 Vue3英文官网：
 vuejs.org
