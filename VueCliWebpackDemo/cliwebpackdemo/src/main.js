@@ -12,6 +12,18 @@ import { createApp } from 'vue'
 // import App from './13_Keep-Alive的使用(理解)/App.vue'
 // import App from './14_异步组件-1-webpack的分包/App.vue'
 // import App from './14_异步组件-2-组件的异步/App.vue'
-import App from './15_组件的v-model(了解)/App.vue'
+// import App from './15_组件的v-model(了解)/App.vue'
+import App from './16_组件的混入Mixin(了解)/App.vue'
 import "./utils/abc/cba/nba/index"
 createApp(App).mount('#app')
+
+/*
+全局混入mixin的用法
+const app = createApp(App)
+app.mixin({
+  created() {
+    console.log("mixin created")
+  }
+})
+app.mount('#app')
+*/
