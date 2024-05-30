@@ -20,7 +20,8 @@ import { createApp } from 'vue'
 // import App from './19_Setup_reactive让复杂数据类型做到响应式/App.vue'
 // import App from './20_Setup_关于ref的浅层解包的理解/App.vue'
 // import App from './21_Setup_ref让复杂数据类型做到响应式/App.vue'
-import App from './22_习惯上ref和reactive用法的区别/App.vue'
+// import App from './22_习惯上ref和reactive用法的区别/App.vue'
+import App from './23_vue单向数据流/App.vue'
 import "./utils/abc/cba/nba/index"
 createApp(App).mount('#app')
 
