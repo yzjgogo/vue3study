@@ -7,7 +7,7 @@
 
     <div>{{ message }}</div>
     <button @click="changeMessage">改变消息</button>
-    
+
     <div>{{ isDog }}</div>
     <button @click="changeDog">改变狗</button>
   </div>
@@ -17,7 +17,7 @@
   import { ref } from 'vue'
 
   /**
-    ref用于定义基本数据类型的数据(也可以定义复杂数据类型，后面说)
+    ref用于定义基本数据类型的数据(也可以定义复杂数据类型，参考：21_Setup_ref让复杂数据类型做到响应式)
     在setup()函数中读写响应式数据是需要.value手动解包；
     在template中读写响应式数据时，不需要手动解包(也有例外，看后面)
    */
