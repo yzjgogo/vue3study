@@ -12,6 +12,8 @@
   <div id="app">
     <h2>{{message}}</h2>
     <button @click="changeMessage">修改message</button>
+    <button @click="changeInfoPointer">修改info指向</button>
+    <button @click="changeInfoProperty">修改info属性</button>
   </div>
 
   <script src="./lib/vue.js"></script>
@@ -28,7 +30,12 @@
       methods: {
         changeMessage() {
           this.message = "你好啊, 李银河!"
+        },
+        changeInfoPointer() {
           this.info = { name: "kobe" }
+        },
+        changeInfoProperty() {
+          this.info.name = '刘的哈'
         }
       },
       // 官网：https://cn.vuejs.org/guide/essentials/watchers.html
@@ -38,14 +45,28 @@
           console.log("message数据发生了变化:", newValue, oldValue)
         },
 
-        info(newValue, oldValue) {
-          // 2.如果监听的是对象类型, 那么拿到的是代理对象，F12看看：有Proxy字样，属性完全一样
-          console.log("info数据发生了变化:", newValue, oldValue)
-          console.log(newValue.name, oldValue.name)
+        //不使用deep选项时，修改info的属性时不会触发监听，修改info的指向时会触发监听，因为值确实变了
+        // info(newValue, oldValue) {
+        //   // 2.如果监听的是对象类型, 那么拿到的是代理对象，F12看看：有Proxy字样，属性完全一样
+        //   console.log("info数据发生了变化1:", newValue, oldValue)
+        //   console.log("info数据发生了变化2:", newValue===oldValue)//false， 指向变了肯定不是同一个对象
+        //   console.log(newValue.name, oldValue.name)
 
-          // 3.获取原生对象
-          // console.log({ ...newValue }) //使用扩展运算符
-          console.log(Vue.toRaw(newValue)) //使用toRaw
+        //   // 3.获取原生对象
+        //   // console.log({ ...newValue }) //使用扩展运算符
+        //   console.log(Vue.toRaw(newValue)) //使用toRaw
+        // }
+
+        //使用deep选项时，修改info属性和修改info指向都会触发监听
+        //当修改info指向时 newValue === oldValue = false
+        //当修改info属性时 newValue === oldValue = true  因为对象的引用地址不变，只是属性变了
+        info:{
+          handler(newValue, oldValue) {
+            //当修改info的属性时，输出的newValue和oldValue完全一样
+            console.log("info数据发生了变化1:", newValue, oldValue)
+            console.log("info数据发生了变化2:", newValue === oldValue)
+          },
+          deep: true
         }
       }
     })

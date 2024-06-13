@@ -24,7 +24,10 @@ import { createApp } from 'vue'
 // import App from './23_vue单向数据流/App.vue'
 // import App from './24_一系列方法/App.vue'
 // import App from './25_Setup中的computed/App.vue'
-import App from './26_Setup_ref获取元素或组件/App.vue'
+// import App from './26_Setup_ref获取元素或组件/App.vue'
+// import App from './27_Setup的生命周期函数/App.vue'
+// import App from './28_Setup的Provide和Inject/App.vue'
+import App from './29_Setup中用watch侦听数据变化/App.vue'
 import "./utils/abc/cba/nba/index"
 createApp(App).mount('#app')
 
