@@ -27,7 +27,10 @@ import { createApp } from 'vue'
 // import App from './26_Setup_ref获取元素或组件/App.vue'
 // import App from './27_Setup的生命周期函数/App.vue'
 // import App from './28_Setup的Provide和Inject/App.vue'
-import App from './29_Setup中用watch侦听数据变化/App.vue'
+// import App from './29_Setup中用watch侦听数据变化/App.vue'
+// import App from './30_响应式的追踪依赖watchEffect/App.vue'
+// import App from './31_相比vue2选项式API_Setup的好处1_还没好处/App.vue'
+import App from './32_相比vue2选项式API_Setup的好处1_hooks好处/App.vue'
 import "./utils/abc/cba/nba/index"
 createApp(App).mount('#app')
 

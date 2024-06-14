@@ -14,7 +14,7 @@
     reactive用于定义复杂的响应式数据，例如对象、数组等
     用法reactivie({...})
 
-    注意reactive前车不到.value，.value的说法只有ref才有
+    注意reactive牵扯不到.value，.value的说法只有ref才有
    */
   export default {
     setup() {

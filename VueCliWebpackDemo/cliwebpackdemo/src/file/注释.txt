@@ -13,6 +13,7 @@ vuejs.org
 Vue3中文官网有两个：
 v3.cn.vuejs.org
 staging-cn.vuejs.org (改为：https://cn.vuejs.org/)
+现在统一成一个：https://cn.vuejs.org/
 
 我们打算使用vue cli创建这个项目(这种创建方式是使用webpack作为构建打包工具，也可以使用vite作为构建打包工具,vite_demo就是vite项目)
 
