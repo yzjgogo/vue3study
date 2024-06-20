@@ -1,3 +1,5 @@
+// 路由的官网：https://router.vuejs.org/zh/guide/
+
 //router-link、to、replace、active-class="active"等的用法参考vue2
 
 // 路由使用步骤1：导入createRouter用于创建路由和组件的映射关系路由配置等、导入createWebHashHistory用于指定路由的模式为hash模式；createWebHistory用于指定路由的模式为history
@@ -51,6 +53,40 @@ const router = createRouter({
       component: () => import("../Views/NotFound.vue")
     }
   ]
+})
+
+/**
+
+导航守卫，参考vue2，包括：全局导航守卫，路由独享守卫，组件内的守卫
+https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%8F%AF%E7%94%A8%E7%9A%84%E9%85%8D%E7%BD%AE-api
+
+vue2是不是不支持return的方式，
+vue3也支持next()的方式，但是更推荐return的方式
+next() -> 原来的路由跳转
+next('/home') -> 改变原来的路由跳转，转而跳转到home，是否支持对象{path:'/home',query:{}}呢
+不掉next()则不跳转
+
+导航的完整解析流程：参考 导航的完整解析流程.jpg
+ 
+全局导航守卫
+ */
+// router.beforeEach(()=>{}) 可以不传参
+// router.beforeEach((to,from)=>{}) 可以传这两个参
+router.beforeEach((to,from,next) => { //可以传这三个参
+
+  // return false 取消当前导航，即不跳转了
+
+  // retrun undefined 或者 不return任何东西，继续跳转默认的导航
+
+  // return '/home' 跳转到指定的路由
+
+  //跳转到指定的路由，且可带更多的参数，name应该也可以吧？
+  // return {
+  //   path:'/home',
+  //   query:{
+  //     age:18
+  //   }
+  // }
 })
 
 // 路由使用步骤4：导出创建的路由，给main.js里的全局vue使用
