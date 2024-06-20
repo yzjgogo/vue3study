@@ -1,15 +1,65 @@
-路由的基本使用步骤：
+--1,路由的基本使用步骤：
 路由使用步骤1234567
 
-动态路由传参：
+--2,动态路由传参：
 关键字：动态路由参考vue2
 
 
-默认路径：
+--3,默认路径：
 关键字：果不配置默认路径，则console会报警告：No match found for location with path "/"，这里的处里方式是直接将默认路径重定向到home
 
-错误路径NotFound
+--4,错误路径NotFound
 关键字：
     //错误路径处理：一般如果用户在浏览器地址栏输入了错误的路径，我们应该给一个NotFound页面,即所有在routes中匹配不到的路径都显示我们这里配置的NotFound.vue组件
     // '/:pathMatch(.*)' 匹配到错误路径后，在NotFound.vue中能通过$route.params.pathMatch获取到错误路径，例如地址栏是http://192.168.2.7:8082/#/abc，则返回'abc'；地址栏是http://192.168.2.7:8082/#/abc/def，则返回'abc/def'
     // '/:pathMatch(.*)*' 匹配到错误路径后，在NotFound.vue中能通过$route.params.pathMatch获取到错误路径,获取的方式，如果这个错误路径可以通过'/'分割，则返回分割后的数组，如果错误路径不可以通过'/'分割，则返回这个错误的数组只有一个元素，这个元素就是这个错误路径，例如地址栏是http://192.168.2.7:8082/#/abc，则返回['abc']；地址栏是http://192.168.2.7:8082/#/abc/def，则返回['abc','def']
+
+
+--5,代码实现路由跳转：
+    参考vue2即可；
+
+
+--6,路由的前进后退：
+    组合式API的setup中：
+    import {useRouter} from 'vue-ruter'
+    const router = useRuter()
+    router.back()
+    router.forward()
+    router.go(-1) 等价于 router.back()
+    router.go(1) 等价于 router.forward()
+    router.go(-999)
+    router.go(999)
+
+    选项式API：
+    this.$router.back()
+    this.$router.forward()
+    this.$router.go(delta)
+
+--7，动态管理路由
+
+动态添加路由：
+const router = createRouter({...}) 参考：route_demo\src\router\index.js
+  // 一级路由
+  router.addRoute({
+    path: "/admin",
+    component: () => import("../Views/Admin.vue")
+  })
+
+  // 添加二级
+  router.addRoute("home", {
+    path: "vip",
+    component: () => import("../Views/HomeVip.vue")
+  })
+
+
+删除路由：动态路由管理.jpg
+关键字：removeRoute,addRoute
+
+检查路由是否存在：动态路由管理.jpg
+router.hasRoute()
+获取所有路由组成的数组：
+router.getRoutes()
+
+
+
+

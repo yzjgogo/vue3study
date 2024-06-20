@@ -1,6 +1,7 @@
 <template>
   <div>
-    Home
+    <!-- 在template中获取params的方式vue3和vue2一样 -->
+    User:{{ $route.params.id }}
   </div>
 </template>
 
@@ -16,7 +17,6 @@ export default {
   components: {
   },
   mounted() {
-    // 选项式API获取params的方式
     console.log("选项式API获取params的方式", this.$route.params.id)
 
   }
