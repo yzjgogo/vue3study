@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>我是APP</div>
+    <div>-我是APP-</div>
       <router-link to="/home">首页&nbsp;&nbsp;</router-link>
       <router-link to="/about">&nbsp;&nbsp;关于</router-link>
       <router-link to="/user/123">&nbsp;&nbsp;用户</router-link>
