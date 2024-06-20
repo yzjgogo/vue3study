@@ -34,6 +34,21 @@ const router = createRouter({
       name:'about',
       path:'/about',
       component:About
+    },
+
+    // 动态路由参考vue2，在setup中获取params参考：User.vue
+    {
+      path:'/user/:id',
+      component: () => import('../Views/User.vue')
+    },
+
+    //错误路径处理：一般如果用户在浏览器地址栏输入了错误的路径，我们应该给一个NotFound页面,即所有在routes中匹配不到的路径都显示我们这里配置的NotFound.vue组件
+    // '/:pathMatch(.*)' 匹配到错误路径后，在NotFound.vue中能通过$route.params.pathMatch获取到错误路径，例如地址栏是http://192.168.2.7:8082/#/abc，则返回'abc'；地址栏是http://192.168.2.7:8082/#/abc/def，则返回'abc/def'
+    // '/:pathMatch(.*)*' 匹配到错误路径后，在NotFound.vue中能通过$route.params.pathMatch获取到错误路径,获取的方式，如果这个错误路径可以通过'/'分割，则返回分割后的数组，如果错误路径不可以通过'/'分割，则返回这个错误的数组只有一个元素，这个元素就是这个错误路径，例如地址栏是http://192.168.2.7:8082/#/abc，则返回['abc']；地址栏是http://192.168.2.7:8082/#/abc/def，则返回['abc','def']
+    {
+      // path: "/:pathMatch(.*)",
+      path: "/:pathMatch(.*)*",
+      component: () => import("../Views/NotFound.vue")
     }
   ]
 })
