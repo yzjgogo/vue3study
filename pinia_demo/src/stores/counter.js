@@ -6,4 +6,6 @@ const userCounter = defineStore("counter", {
     count: 99
   })
 })
+//store有三个核心概念：state、getters、actions,等同于组件的data、computed、methods
+//一旦store被实例化，你就可以直接在store上访问state、getters、actions中定义的任何属性
 export default userCounter
