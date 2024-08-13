@@ -1,15 +1,27 @@
 <template>
+  
+  <div style="background-color: aqua;">访问store里的state</div>
   <!-- pinia使用步骤5：使用store里的数据，无需.state -->
   <div>响应式:counterStore.count：{{ counterStore.count }}</div>
   <div>响应式:toRefs(counterStore):{{ rCount }}</div>
   <div>响应式:storeToRefs(counterStore):{{ srCount }}</div>
   <div>非响应式:{{ noResponseCount }}</div>
   <button @click="updateCount">改变count</button>
-  <div style="background-color: aqua;">userStore信息：</div>
+
+  <div style="background-color: aqua;margin-top: 20px;">修改stroe里的state</div>
   <button @click="doPatch">使用$patch一次性修改多个状态</button>
   <button @click="doState">使用$state替换state为新的对象</button>
   <button @click="doReset">使用$reset重置state，回到初始状态</button>
   <div>{{ userStore.name }},{{ userStore.age }},{{ userStore.level }},{{ userStore.home }},{{ userStore }}</div>
+
+  
+
+  <div style="background-color: aqua;margin-top: 20px;">getters</div>
+  <!-- 无需counterStore.getters.doubleCount -->
+  <div>访问getters的dobuleCount:{{ counterStore.doubleCount }}</div>
+  <div>访问getters的doubleCountAddone:{{ counterStore.doubleCountAddone }}</div>
+  <div>访问getters的getFriendById:{{ counterStore.getFriendById(111) }}</div>
+  <div>访问getters的showMessage:{{ counterStore.showMessage }}</div>
 </template>
 
 <script setup>
@@ -31,6 +43,11 @@ const { count: srCount } = storeToRefs(counterStore)//pinia提供的专门用来
 function updateCount() {
   counterStore.count++
 }
+
+
+
+
+// -----------------------------------------------------------------------------------------
 
 
 
