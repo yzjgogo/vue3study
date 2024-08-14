@@ -1,0 +1,2 @@
+1：当使用npm时发现很慢，卡着不动时，参考：npm加速.md
+主要是可以考虑使用淘宝的npm镜像：npm config set registry https://registry.npmmirror.com/
