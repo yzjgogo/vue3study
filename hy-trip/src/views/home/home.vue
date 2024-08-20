@@ -68,8 +68,13 @@
       c:此时就可以直接使用vant的各种组件了，例如这里使用一个van-button <br>
 
       <van-button type="primary">主要按钮</van-button>
+    </div>
 
 
+
+    <div class="item bg1">
+      9：穿透组件修改子组件或引用的其他的组件的样式<br>
+      看hy-trip\src\components\tab-bar\tab-bar.vue<br>
     </div>
 
 
@@ -87,6 +92,9 @@ function getImagUrl(localUrl) {
 </script>
 
 <style lang="less" scoped>
+.home{
+  padding-bottom: 50px;
+}
 .item {
   margin-top: 10px;
 }
