@@ -10,7 +10,7 @@
 
         <!-- 演示使用自定义样式：使用插槽实现自定义icon和标题 -->
         <van-tabbar-item :to="item.path" v-else>
-          <!-- 标题的插槽 -->
+          <!-- 标题的插槽，因为标题的插槽是默认插槽，则可以省略#default这个template，直接用<span>{{ item.text }}</span> -->
           <template #default>
             <span>{{ item.text }}</span>
           </template>
