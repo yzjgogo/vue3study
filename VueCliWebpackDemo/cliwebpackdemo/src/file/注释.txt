@@ -4,6 +4,11 @@ vscode针对vue的插件：
 vetur: 对vue2有很友好的支持；对vue3的支持不友好；
 volar: 对vue3有很友好的支持，且现在在vscode已经搜不到了，因为已经更名为Vue-Official 成为vue3官方支持的了
 
+支持按住Ctrl+鼠标左键，对引用跳转，锦雷给我推荐的
+Vue Jumper：参考vue_jumper.jpeg
+别名路径跳转：别名路径跳转.jpeg
+
+
 老师讲vue3时的插件：
 路径自动补全插件：Path Intellisense
 
