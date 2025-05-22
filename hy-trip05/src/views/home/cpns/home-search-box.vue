@@ -79,6 +79,7 @@ const cityClick = () => {
   router.push("/city")
 }
 const positionClick = () => {
+  //学习记录4：使用浏览器自带API，navigator.geolocation.getCurrentPosition获取地理位置
   navigator.geolocation.getCurrentPosition(res => {
     console.log("获取位置成功:", res)
   }, err => {
