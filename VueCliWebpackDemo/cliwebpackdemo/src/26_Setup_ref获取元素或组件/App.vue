@@ -58,7 +58,7 @@
         console.log(titleRef.value)
       }
 
-      //步骤2：将定义的titleRef从setup中return出去
+      //步骤2：将定义的titleRef从setup中return出去,后来补充：应该不需要return吧，验证一下
       return {
         titleRef,
         btnRef,
