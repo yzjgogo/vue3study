@@ -8,13 +8,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted} from 'vue'
 import useScroll from '@/hooks/useScroll';
 
 const favorRef = ref()
 
 useScroll(favorRef)
 
+
+
+
+//监听组件创建的生命周期函数
+onMounted(() => {
+  console.log("收藏执行onMounted");
+})
 </script>
 
 <style lang="less" scoped>

@@ -15,11 +15,12 @@
   </div>
 </template>
 
-<script>
+<!-- 注释掉的内容 -->
+<!-- <script>
   export default { name: "home" }
-</script>
+</script> -->
 <script setup>
-import { onActivated, ref, watch } from 'vue'
+import { onActivated, ref, watch, onMounted } from 'vue'
 import useHomeStore from '@/stores/modules/home';
 import HomeNavBar from './cpns/home-nav-bar.vue'
 import HomeSearchBox from './cpns/home-search-box.vue'
@@ -65,6 +66,15 @@ onActivated(() => {
   })
 })
 
+
+// 学习记录2：vue3中，setup函数的生命周期函数没有onBeforeCreate和onCreated等，所有的钩子参考：
+//https://cn.vuejs.org/api/composition-api-lifecycle.html
+//https://cn.vuejs.org/guide/essentials/lifecycle.html
+
+//监听组件创建的生命周期函数
+onMounted(() => {
+  console.log("Home执行onMounted");
+})
 
 </script>
 
