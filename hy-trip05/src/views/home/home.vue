@@ -29,6 +29,7 @@ import HomeContent from './cpns/home-content.vue'
 import SearchBar from '@/components/search-bar/search-bar.vue'
 
 import useScroll from '@/hooks/useScroll'
+//学习记录3：import { computed } from 'vue'; 也可以，参考：导包方式的区别.png
 import { computed } from '@vue/reactivity';
 
 // 发送网络请求
