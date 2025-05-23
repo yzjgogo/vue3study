@@ -79,7 +79,12 @@ const sectionEls = ref({})
 const names = computed(() => {
   return Object.keys(sectionEls.value)
 })
+/**
+ * 
+ * @param value 学习记录5： ref可以传入一个函数，将这个组件实例作为函数参数传入； 参考：ref传入一个函数.png
+ */
 const getSectionRef = (value) => {
+  console.log('getSectionRef执行',value)
   if (!value) return
   const name = value.$el.getAttribute("name")
   sectionEls.value[name] = value.$el
@@ -88,6 +93,7 @@ const getSectionRef = (value) => {
 let isClick = false
 let currentDistance = -1
 const tabClick = (index) => {
+  console.log('tabClick执行',index)
   const key = Object.keys(sectionEls.value)[index]
   const el = sectionEls.value[key]
   let distance = el.offsetTop
