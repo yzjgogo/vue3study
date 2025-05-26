@@ -35,9 +35,19 @@ import { createApp } from 'vue'
 // import App from './34_组合式API和选项式API可以共存/App.vue'
 // import App from './35_自定义指令/App.vue'
 // import App from './36_teleport/App.vue'
-import App from './37_suspense/App.vue'
+// import App from './37_suspense/App.vue'
+import App from './38_plugin/App.vue'
 import "./utils/abc/cba/nba/index"
-createApp(App).mount('#app')
+const app = createApp(App)
+
+
+//插件使用步骤2：导入myPlugin插件，然后通过app.use()方法使用插件,其中use的第二个参数是插件的额外配置参数，由myPlugin.js的install方法中的第二个参数接收。至此，插件已经安装完成，后续就是使用了
+import myPlugin from './plugins/myPlugin.js'
+app.use(myPlugin,{
+  aa: '我是插件的参数',
+})
+
+app.mount('#app')
 
 //学习35_自定义指令时用下面这两行
 // import directives from "./35_自定义指令/directives/index"
