@@ -36,7 +36,14 @@ import { createApp } from 'vue'
 // import App from './35_自定义指令/App.vue'
 // import App from './36_teleport/App.vue'
 // import App from './37_suspense/App.vue'
-import App from './38_plugin/App.vue'
+// import App from './38_plugin/App.vue'
+// import App from './39_1Render_选项式/App.vue'
+// import App from './39_2Render_组合式/App.vue'
+// import App from './39_3Render_组合式语法糖/App.vue'
+// import App from './39_4_JSX的基本使用/App.vue'
+// import App from './39_5_JSX_选项式/App.vue'
+// import App from './39_6_JSX_组合式/App.vue'
+import App from './39_7_JSX_组合式语法糖/App.vue'
 import "./utils/abc/cba/nba/index"
 const app = createApp(App)
 
