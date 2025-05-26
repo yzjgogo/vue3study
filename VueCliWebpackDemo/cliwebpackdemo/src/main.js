@@ -34,7 +34,8 @@ import { createApp } from 'vue'
 // import App from './33_Setup的语法糖/App.vue'
 // import App from './34_组合式API和选项式API可以共存/App.vue'
 // import App from './35_自定义指令/App.vue'
-import App from './36_teleport/App.vue'
+// import App from './36_teleport/App.vue'
+import App from './37_suspense/App.vue'
 import "./utils/abc/cba/nba/index"
 createApp(App).mount('#app')
 
