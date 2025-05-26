@@ -33,8 +33,13 @@ import { createApp } from 'vue'
 // import App from './32_相比vue2选项式API_Setup的好处1_hooks好处/App.vue'
 // import App from './33_Setup的语法糖/App.vue'
 import App from './34_组合式API和选项式API可以共存/App.vue'
+// import App from './35_自定义指令/App.vue'
 import "./utils/abc/cba/nba/index"
 createApp(App).mount('#app')
+
+//学习35_自定义指令时用下面这两行
+// import directives from "./35_自定义指令/directives/index"
+// createApp(App).use(directives).mount("#app")
 
 /*
 全局混入mixin的用法
