@@ -40,7 +40,7 @@ import { createApp } from 'vue'
 // import App from './39_1Render_选项式/App.vue'
 // import App from './39_2Render_组合式/App.vue'
 // import App from './39_3Render_组合式语法糖/App.vue'
-// import App from './39_4_JSX的基本使用/App.vue'
+import App from './39_4_JSX的基本使用/App.vue'
 // import App from './39_5_JSX_选项式/App.vue'
 // import App from './39_6_JSX_组合式/App.vue'
 // import App from './39_7_JSX_组合式语法糖/App.vue'
@@ -51,7 +51,7 @@ import { createApp } from 'vue'
 // import App from './40_5_transition设置离开和进入的组件的动画先后/App.vue'
 // import App from './40_6_首次渲染就执行东海/App.vue'
 // import App from './40_7_transition也支持动态组件/App.vue'
-import App from './40_8_transition-group列表过渡/App.vue'
+// import App from './40_8_transition-group列表过渡/App.vue'
 import "./utils/abc/cba/nba/index"
 const app = createApp(App)
 

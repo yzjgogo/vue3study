@@ -5,6 +5,9 @@
 
 vue中jsx用的比较少，react中用的比较多,后面讲react时会详细介绍jsx的用法
 
+
+学习的时候，教程里说jsx需要做如图‘jsx配置.jpeg’的配置，但是我没配置也执行成功了呢，以后留意下这个配置，参考：jsx配置.jpeg
+
 -->
 
 <script lang="jsx">
