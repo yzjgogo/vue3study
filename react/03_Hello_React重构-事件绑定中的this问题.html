@@ -8,6 +8,9 @@
 </head>
 <body>
 
+
+  <!-- 参考：react\10_JSX的事件绑定中的this问题解决方案.html -->
+
   <div id="root"></div>
   
   <script src="./lib/react.js"></script>
@@ -47,6 +50,7 @@
         return (
           <div>
             <h2>{this.state.message}</h2>
+            {/*这里是在事件里，绑定一个函数名，并不是函数调用，因此存在this问题，如果<button>this.btnClick()</button>这样直接执行函数则不存在this问题，这个this就是当前组件对象*/}
             <button onClick={this.btnClick}>修改文本</button>
           </div>
         )
