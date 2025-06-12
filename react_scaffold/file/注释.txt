@@ -1,0 +1,16 @@
+一:react脚手架创建项目的过程
+
+1：安装node
+2：安装react脚手架:create-react-app
+    npm install create-react-app -g
+    现在create-react-app好像已经过时了，安装时会有提示
+    默认脚手架就是基于webpack，但是现在过时了，新的不知道是基于什么的
+3：创建React项目
+    create-react-app 项目名称 ,注意，项目名称不能包含大写字母
+    秩序这一个命令，稍等片刻，不用做任何选择，自动生成项目框架
+4：项目创建完成后
+    以前好像是用yarn，现在直接用的就是npm
+    可以进入package.json,看看启动命令是什么
+    这里是 "start": "react-scripts start" ，可以执行npm run start启动看看
+    package.json中另外提供了eject命令："eject": "react-scripts eject"
+    用法是这样的，默认create-react-app构建的项目，webpack的各种配置都被隐藏起来了(在node_modules中)，如果你想暴露出来，可以执行npm run eject,注意，在这行这个命令前把所有的代码都提交，因为这个命令会生成很多关于webpack的文件和文件夹。
