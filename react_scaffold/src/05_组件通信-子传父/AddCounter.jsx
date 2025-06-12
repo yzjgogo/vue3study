@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 
 export class AddCounter extends Component {
   addCount(count) {
+    // 调用父组件传递过来的方法，向父组件传递数据
     this.props.addClick(count)
   }
 
