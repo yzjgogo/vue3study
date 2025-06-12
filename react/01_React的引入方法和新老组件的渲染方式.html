@@ -20,12 +20,18 @@
   -->
 
   <!-- 添加依赖 -->
-  <!-- 依赖三个包 -->
+  <!-- 
+  依赖三个包 :
+  react：包含react所必须的核心代码,比如nativeReact也要用这个包，前端的react也要用这个包
+  react-dom：react渲染在不同平台所需要的核心代码，web端：react-dom会将jsx最终渲染成真实的DOM，显示在浏览器中，native端：react-dom会将jsx最终渲染成原生的控件（比如Android中的Button，iOS中的UIButton）。
+  babel：将jsx转换成React代码的工具，可以让程序员用更简单的jsx开发，而不需要使用React.createElement()方法来创建元素，因为React.createElement()方法编写的代码非常的繁琐和可读性差。,babel不是react的东西。
+  -->
   <!-- CDN引入 -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
   <!-- babel
-   babal可以将ES6+、React JSX、TS转为普通的js代码，让绝大多数浏览器都支持的es5语法 -->
+   babal可以将ES6+、React JSX、TS转为普通的js代码，让绝大多数浏览器都支持的es5语法，
+   其实如果你能熟练使用React.createElement()的方法来开发react，那么你完全不需要用babel，因为你不用谢jsx了。 -->
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
   <!-- 
