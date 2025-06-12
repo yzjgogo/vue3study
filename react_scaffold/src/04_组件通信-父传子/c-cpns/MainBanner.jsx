@@ -35,6 +35,8 @@ export class MainBanner extends Component {
   }
 }
 
+//https://zh-hans.legacy.reactjs.org/docs/typechecking-with-proptypes.html
+
 //因为js是弱类型语言，可以借助prop-types实现类型效验，要求父组件只能传入array类型的banners和string类型的title,否则报错，如果用ts则ts本身是强类型语言就很方便了
 MainBanner.propTypes = {
   banners: PropTypes.array,
