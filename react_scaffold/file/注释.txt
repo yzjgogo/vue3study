@@ -14,3 +14,5 @@
     这里是 "start": "react-scripts start" ，可以执行npm run start启动看看
     package.json中另外提供了eject命令："eject": "react-scripts eject"
     用法是这样的，默认create-react-app构建的项目，webpack的各种配置都被隐藏起来了(在node_modules中)，如果你想暴露出来，可以执行npm run eject,注意，在这行这个命令前把所有的代码都提交，因为这个命令会生成很多关于webpack的文件和文件夹。
+ 5：项目创建完成后，我们可以把src下的东西全删除了。自己按需编写  
+    看“目录结构.png”
