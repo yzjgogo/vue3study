@@ -10,7 +10,8 @@ export class Main extends Component {
 
     this.state = {
       banners: [],
-      productList: []
+      productList: [],
+      info: { name: "kobe", age: 30 }
     }
   }
 
@@ -33,7 +34,7 @@ export class Main extends Component {
    * @returns 
    */
   render() {
-    const { banners, productList } = this.state
+    const { banners, productList, info } = this.state
 
     return (
       <div className='main'>
@@ -41,6 +42,11 @@ export class Main extends Component {
         <MainBanner banners={banners} title="轮播图"/>
         <MainBanner/>
         <MainProductList productList={productList}/>
+
+        {/* react提供了这种便捷写法，可以一次性把info的所有属性都传递过去
+        在Son组件的props中就会有name和age两个属性,这和<Son name={info.name} age={info.age}/>是等价的
+        */}
+        {/* <Son {...info}/> */}
       </div>
     )
   }
