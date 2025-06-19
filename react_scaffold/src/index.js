@@ -11,7 +11,9 @@ import ReactDOM from "react-dom/client"
 // import App from "./07_组件的插槽实现/App"
 // import App from "./08_组件作用域插槽/App"
 // import App from "./09_非父子通信-Context/App"
-import App from "./11_setState详细使用/App"
+// import App from "./11_setState详细使用/App"
+// import App from "./12_render函数的优化-未优化的情况/App"
+import App from "./13_render函数的优化-PureComponent-memo/App"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
 const root = ReactDOM.createRoot(document.querySelector("#root"))

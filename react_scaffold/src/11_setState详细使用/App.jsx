@@ -25,8 +25,10 @@ export class App extends Component {
 
   changeText() {
     setTimeout(() => {
-      // 在react18之前, setTimeout中setState操作, 是同步操作
-      // 在react18之后, setTimeout中setState异步操作(批处理)
+      // 在react18之前, setTimeout中setState操作, 是同步操作,顺序执行
+      // 在react18之后, setTimeout中setState异步操作(批处理)，但可以通过flushSync来强制同步执行,同步执行顺序： this.setState({ message: "你好啊, 李银河" }) -> 触发render() -> console.log(this.state.message)
+
+      //不使用flushSync时的异步执行顺序：this.setState({ message: "你好啊, 李银河" }) -> console.log(this.state.message) -> render() 
       flushSync(() => {
         this.setState({ message: "你好啊, 李银河" })
       })
