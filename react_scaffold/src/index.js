@@ -14,7 +14,10 @@ import ReactDOM from "react-dom/client"
 // import App from "./11_setState详细使用/App"
 // import App from "./12_1_render函数的优化-未优化的情况/App"
 // import App from "./12_2_render函数的优化-PureComponent-memo/App"
-import App from "./13_数据不可变的力量-PureComponent使用时的注意事项/App"
+// import App from "./13_数据不可变的力量-PureComponent使用时的注意事项/App"
+// import App from "./14_1_ref获取dom和类组件/App"
+// import App from "./14_2_ref获取函数组件里的dom获组件/App"
+import App from "./15_受控和非受控组件/App"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
 const root = ReactDOM.createRoot(document.querySelector("#root"))
