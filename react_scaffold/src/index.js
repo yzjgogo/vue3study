@@ -18,7 +18,8 @@ import ReactDOM from "react-dom/client"
 // import App from "./14_1_ref获取dom和类组件/App"
 // import App from "./14_2_ref获取函数组件里的dom获组件/App"
 // import App from "./15_1_受控和非受控组件/App"
-import App from "./15_2_受控组件-form表单/App"
+// import App from "./15_2_受控组件-form表单/App"
+import App from "./15_3_受控组件-form表单-checkbox单选多选/App"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
 const root = ReactDOM.createRoot(document.querySelector("#root"))
