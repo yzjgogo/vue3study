@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
+import React, { createRef, PureComponent } from 'react'
 /**
- * 只需要看select部分，其他的内容都是“15_3_受控组件-form表单-checkbox单选多选”的内容
+ * 这里的非受控组件只讲了intro，其他内容是上个课程“15_4_受控组件-form表单-select单选多选”的内容
  */
 export class App extends PureComponent {
 
@@ -16,8 +16,15 @@ export class App extends PureComponent {
         { value: "dance", text: "跳", isChecked: false },
         { value: "rap", text: "rap", isChecked: false }
       ],
-      fruit: ["orange"]//单选时'orange'
+      fruit: ["orange"],
+      intro: "哈哈哈"
     }
+
+    this.introRef = createRef()
+  }
+
+  componentDidMount() {
+    // this.introRef.current.addEventListener
   }
 
   handleSubmitClick(event) {
@@ -29,6 +36,7 @@ export class App extends PureComponent {
     console.log(this.state.username, this.state.password)
     const hobbies = this.state.hobbies.filter(item => item.isChecked).map(item => item.value)
     console.log("获取爱好: ", hobbies)
+    console.log("获取结果:", this.introRef.current.value)
 
     // 3.以网络请求的方式, 将数据传递给服务器(ajax/fetch/axios)
   }
@@ -50,20 +58,18 @@ export class App extends PureComponent {
   }
 
   handleFruitChange(event) {
-    console.log('水果', event)
-    //event.target.selectedOptions是一个伪数组,Array.from可以将其转换为真正的数组
     const options = Array.from(event.target.selectedOptions)
-    const values = options.map(item => item.value)//value属性就是apple、orange、banana
+    const values = options.map(item => item.value)
     this.setState({ fruit: values })
 
-    // 额外补充: Array.from(可迭代对象)，可以将可迭代对象转换为数组
-    // Array.from(arguments,mapFn) 可以接收第二个参数，类似于map函数
+    // 额外补充: Array.from(可迭代对象)
+    // Array.from(arguments)
     const values2 = Array.from(event.target.selectedOptions, item => item.value)
     console.log(values2)
   }
 
   render() {
-    const { username, password, isAgree, hobbies, fruit } = this.state
+    const { username, password, isAgree, hobbies, fruit, intro } = this.state
 
     return (
       <div>
@@ -123,14 +129,15 @@ export class App extends PureComponent {
             }
           </div>
 
-          {/* 4.select 
-            想把select设置为单选，则state中的fruit应该是一个字符串，例如this.state = {fruit: "orange"}，然后去掉multiple属性
-          */}
+          {/* 4.select */}
           <select value={fruit} onChange={e => this.handleFruitChange(e)} multiple>
             <option value="apple">苹果</option>
             <option value="orange">橘子</option>
             <option value="banana">香蕉</option>
           </select>
+
+          {/* 5.非受控组件 */}
+          <input type="text" defaultValue={intro} ref={this.introRef} />
 
           <div>
             <button type='submit'>注册</button>
