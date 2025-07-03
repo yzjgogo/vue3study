@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 // import App from "./App"
 // import App from './01_类组件和函数组件/App_class'
 // import App from './01_类组件和函数组件/App_func'
+// import App from './01_类组件和函数组件/函数组件和普通函数的区别'
 // import App from "./02_组件生命周期函数/App"
 // import App from "./03_组件开发嵌套关系/App"
 // import App from "./04_组件通信-父传子/App"
@@ -21,8 +22,9 @@ import ReactDOM from "react-dom/client"
 // import App from "./15_2_受控组件-form表单/App"
 // import App from "./15_3_受控组件-form表单-checkbox单选多选/App"
 // import App from "./15_4_受控组件-form表单-select单选多选/App"
-import App from "./15_5_非受控组件的使用/App"
-import { StrictMode } from "react"
+// import App from "./15_5_非受控组件的使用/App"
+import App from "./16_React高阶组件/01_高阶组件的定义和作用"
+// import { StrictMode } from "react"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
 const root = ReactDOM.createRoot(document.querySelector("#root"))
