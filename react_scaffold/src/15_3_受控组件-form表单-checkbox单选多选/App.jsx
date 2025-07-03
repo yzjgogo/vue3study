@@ -38,6 +38,8 @@ export class App extends PureComponent {
   }
 
   handleAgreeChange(event) {
+    console.log("handleAgreeChange执行1:", event)//可看到event.target有checked属性
+    console.log("handleAgreeChange执行2:", event.target)//这样是输出这个标签，没看到checked属性
     this.setState({ isAgree: event.target.checked })
   }
 
@@ -65,6 +67,7 @@ export class App extends PureComponent {
                 onChange={e => this.handleInputChange(e)}
               />
             </label>
+            <br/>
             <label htmlFor="password">
               密码: 
               <input 
@@ -109,11 +112,11 @@ export class App extends PureComponent {
           </div>
 
           {/* 4.select */}
-          <select>
+          {/* <select>
             <option value="apple">苹果</option>
             <option value="orange">橘子</option>
             <option value="banana">香蕉</option>
-          </select>
+          </select> */}
 
           <div>
             <button type='submit'>注册</button>
