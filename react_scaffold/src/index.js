@@ -23,7 +23,11 @@ import ReactDOM from "react-dom/client"
 // import App from "./15_3_受控组件-form表单-checkbox单选多选/App"
 // import App from "./15_4_受控组件-form表单-select单选多选/App"
 // import App from "./15_5_非受控组件的使用/App"
-import App from "./16_React高阶组件/01_高阶组件的定义和作用"
+// import App from "./16_React高阶组件/01_高阶组件的定义和作用"
+// import App from "./16_React高阶组件/02_高阶组件应用-props增强"
+// import App from "./16_React高阶组件/03_高阶组件应用-Context共享"
+// import App from "./16_React高阶组件/04_高阶组件应用-登录鉴权"
+import App from "./16_React高阶组件/05_高阶组件应用-生命周期"
 // import { StrictMode } from "react"
 
 // 编写React代码, 并且通过React渲染出来对应的内容

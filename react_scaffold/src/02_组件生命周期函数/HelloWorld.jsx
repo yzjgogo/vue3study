@@ -4,6 +4,9 @@ import React from "react"
  * 这里介绍类组件的生命周期，函数组件没有生命周期回调
  * 参考图片：生命周期.png 和 不常用生命周期.png
  * https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+ * 
+ * 参考：react_scaffold\src\16_React高阶组件\05_高阶组件应用-生命周期.jsx
+ * 里面用到了‘UNSAFE_componentWillMount’这个生命周期函数，
  */
 class HelloWorld extends React.Component {
   // 1.构造方法: constructor

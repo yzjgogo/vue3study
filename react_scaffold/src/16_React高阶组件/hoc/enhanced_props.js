@@ -5,7 +5,7 @@ function enhancedUserInfo(OriginComponent) {
   class NewComponent extends PureComponent {
     constructor(props) {
       super(props)
-
+      console.log("enhancedUserInfo执行了", props)
       this.state = {
         userInfo: {
           name: "coderwhy",

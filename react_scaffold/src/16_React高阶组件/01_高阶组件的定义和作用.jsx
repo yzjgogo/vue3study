@@ -18,6 +18,8 @@ import React, { PureComponent } from 'react'
 
   注意此时真个App的组件树是 <App/> -> <NewCpn/> -> <HelloWorld name="why"/>,并没有HelloWorldHOC和hoc组件。（参考：React开发调试工具，F12 Components看看）
   注意这里为了附加HelloWorld的功能，多引入了NewCpn组件
+
+  对于高阶组件函数(hoc)，其参数应该是一个组件，例如这里的参数是Cpn，Cpn接收一个组件。（我自己总结的）
 */
 function hoc(Cpn) {
   class NewCpn extends PureComponent {
