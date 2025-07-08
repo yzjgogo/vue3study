@@ -10,6 +10,9 @@ class AnimBox extends PureComponent {
   }
 }
 
+/**
+ * forwardRef只能接收函数式组件
+ */
 const HelloWorld = forwardRef(function(props, ref) {
   console.log("看看",ref) // 这里可以获取到传入的ref对象
   //3，函数组件里面某个dom或组件使用这个ref

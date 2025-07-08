@@ -20,6 +20,10 @@ import React, { PureComponent } from 'react'
   注意这里为了附加HelloWorld的功能，多引入了NewCpn组件
 
   对于高阶组件函数(hoc)，其参数应该是一个组件，例如这里的参数是Cpn，Cpn接收一个组件。（我自己总结的）
+
+  签名学到的momo和forwardRef都是高阶组件：
+  react_scaffold\src\12_2_render函数的优化-PureComponent-memo
+  react_scaffold\src\14_2_ref获取函数组件里的dom获组件\App.jsx
 */
 function hoc(Cpn) {
   class NewCpn extends PureComponent {
