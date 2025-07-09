@@ -8,22 +8,36 @@
   transition: transform 2s ease;
 } */
 
-.why-appear, .why-enter {
+/* 首次出现动画 和 显示(入场)动画 的初始状态*/
+.why-appear,
+.why-enter {
   opacity: 0;
 }
 
-.why-appear-active, .why-enter-active {
+/* 首次出现动画 和 显示(入场)动画 的动画过程*/
+.why-appear-active,
+.why-enter-active {
   opacity: 1;
   transition: opacity 2s ease;
 }
+/* 首次出现动画 和 显示(入场)动画 的结束状态*/
+.why-appear-done,
+.why-enter-done {
+  opacity: 1;
+}
 
-/* 离开动画 */
+/* 隐藏(出场)动画 的初始状态*/
 .why-exit {
   opacity: 1;
 }
 
+/* 隐藏(出场)动画 的动画过程*/
 .why-exit-active {
   opacity: 0;
   transition: opacity 2s ease;
 }
 
+/* 隐藏(出场)动画 的结束状态*/
+.why-exit-done {
+  opacity: 0;
+}
