@@ -32,6 +32,8 @@ export class App extends PureComponent {
 ◼ react-transition-group本身非常小，不会为我们应用程序增加过多的负担。
 
 
+          CSSTransition用来处理元素的显示、隐藏两种情况的切换；SwitchTransition用来处理一直显示的元素两种状态的切换，例如登录和退出按钮的切换。
+
           使用CSSTransition动画实现显示隐藏过渡动画的情况 
           1：in用于指定监听哪个值实现显示隐藏的除法，这里用isShow很合适
           2：如果添加了unmountOnExit={true}，那么该组件会在执行退出动画结束后被移除掉；
@@ -45,7 +47,12 @@ export class App extends PureComponent {
           5：appear用于指定是否在组件首次渲染时也执行动画，这里设置为true，表示首次渲染时也执行动画。默认是false
           6：onEnter、onEntering、onEntered、onExit、onExiting、onExited等回调函数用于监听动画的不同阶段，可以在这些回调函数中执行一些额外的逻辑，比如打印日志等。
 
+          7：nodeRef用于指定需要监听的元素的引用，这里使用了createRef()创建了一个引用，并将其传递给CSSTransition组件的nodeRef属性，这样可以确保动画只作用于该元素。在老版本的react中可以不指定nodeRef，如果不指定，在CSSTransition内部会使用findDOMNode这个api来找到我们这里的<div className="section">元素，但是如果使用<StrictMode>严格模式F12会看到报错，提示findDOMNode过时了；在新版react中(现在使用的这版)无论是否严格模式都不允许使用findDOMNode了，直接会报错：Uncaught TypeError: react_dom__WEBPACK_IMPORTED_MODULE_3__.findDOMNode is not a function。因此必须使用nodeRef来指定
+        
+
           官网：https://reactcommunity.org/react-transition-group/transition  可能要翻墙
+
+
 
         */}
         <CSSTransition
