@@ -32,7 +32,8 @@ import ReactDOM from "react-dom/client"
 // import App from "./18_React的fragment/App"
 // import App from "./19_React的严格模式/App"
 // import App from "./20_React的动画实现/01_CSSTransition动画/App"
-import App from "./20_React的动画实现/02_SwitchTransition/App"
+// import App from "./20_React的动画实现/02_SwitchTransition/App"
+import App from "./20_React的动画实现/03_TransitionGroup/App"
 // import { StrictMode } from "react"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
