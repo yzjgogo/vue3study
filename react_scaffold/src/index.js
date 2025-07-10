@@ -36,7 +36,8 @@ import ReactDOM from "react-dom/client"
 // import App from "./20_React的动画实现/03_TransitionGroup/App"
 // import App from "./21CSS_1_内联样式的CSS/App"
 // import App from "./21CSS_2_普通的CSS写法/App"
-import App from "./21CSS_3_CSS_Modules/App"
+// import App from "./21CSS_3_CSS_Modules/App"
+import App from "./21CSS_4_Less编写方式/App"
 // import { StrictMode } from "react"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
