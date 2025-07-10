@@ -41,6 +41,9 @@ export const SectionWrapper = styled.div.attrs(props => ({
     }
   }
 
+  /**
+  CSS-in-JS使用步骤7:可以单独定义样式值文件./style/variables.js,然后在CSS-in-JS中使用这些变量
+  */
   .content {
     font-size: ${largeSize}px;
     color: ${primaryColor};

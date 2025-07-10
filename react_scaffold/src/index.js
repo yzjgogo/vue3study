@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client"
+import { ThemeProvider } from "styled-components"
 
 // import App from "./App"
 // import App from './01_类组件和函数组件/App_class'
@@ -43,4 +44,11 @@ import App from "./21CSS_5_CSS_in_js写法/App"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
 const root = ReactDOM.createRoot(document.querySelector("#root"))
-root.render(<App/>)
+// root.render(<App/>)
+// CSS-in-JS使用步骤8:使用ThemeProvider组件来传递css数据，搜索CSS-in-JS使用步骤8-
+//CSS-in-JS使用步骤8-1：ThemeProvider通过theme提供数据
+root.render(
+    <ThemeProvider theme={{ color: "purple", size: "50px" }}>
+      <App />
+    </ThemeProvider>
+);
