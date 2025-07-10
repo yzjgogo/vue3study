@@ -39,16 +39,20 @@ import { ThemeProvider } from "styled-components"
 // import App from "./21CSS_2_普通的CSS写法/App"
 // import App from "./21CSS_3_CSS_Modules/App"
 // import App from "./21CSS_4_Less编写方式/App"
-import App from "./21CSS_5_CSS_in_js写法/App"
+// import App from "./21CSS_5_CSS_in_js写法/App"
+import App from "./21CSS_6_classnames库/App"
 // import { StrictMode } from "react"
 
 // 编写React代码, 并且通过React渲染出来对应的内容
 const root = ReactDOM.createRoot(document.querySelector("#root"))
-// root.render(<App/>)
+root.render(<App/>)
 // CSS-in-JS使用步骤8:使用ThemeProvider组件来传递css数据，搜索CSS-in-JS使用步骤8-
-//CSS-in-JS使用步骤8-1：ThemeProvider通过theme提供数据
+//CSS-in-JS使用步骤8-1：ThemeProvider通过theme提供数据，ThemeProvider必须用在顶层？
+/*
+学CSS-in-JS把这里放开，把上面原来的注释掉
 root.render(
     <ThemeProvider theme={{ color: "purple", size: "50px" }}>
       <App />
     </ThemeProvider>
 );
+*/
