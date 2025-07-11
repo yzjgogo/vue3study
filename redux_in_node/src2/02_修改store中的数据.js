@@ -6,6 +6,7 @@ console.log(store.getState())
 // 修改步骤1：调用store.dispatch方法，传入一个action对象
 // action对象是一个普通的js对象，必须有type属性，type属性表示本次更新的类型
 // 可以有其他属性，表示本次更新的其他数据   
+//唯一修改State的方法一定是触发action，不要试图在其他地方通过任何的方式来修改State：
 const nameAction = { type: "change_name", name: "kobe" }
 store.dispatch(nameAction)
 
