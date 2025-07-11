@@ -1,2 +1,10 @@
 回忆顺序：
-1：
+1：vue3基础：01 - 11
+2：vite_demo
+3:VueCliWebpackDemo
+4:route_demo
+5:vuex_demo 这个可以不看，老师只是告诉你在vue3中，vuex有多难用
+6：pinia_demo
+7:hy-trip-tool 这个是修改了原教程项目的vue、pinia等版本，都是最新版，为了使用devtools 可以开发时查看数据，对比下package.json看看，另外两个hy-trip可以不看
+8：react
+9：react_scaffold
