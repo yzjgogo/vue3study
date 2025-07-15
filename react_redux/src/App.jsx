@@ -6,8 +6,11 @@ import store from "./store"
 import About from './pages/about'
 import Category from './pages/category'
 /**
-案例1:  
-这个项目的home.jsx和profile.jsx演示了如何用最原始的代码把redux应用到react项目中
+
+本项目涉及到如下案例1，案例2，案例3，案例4，共4个知识点，回忆的时候按这个顺序回忆
+
+  案例1:  
+  这个项目的home.jsx和profile.jsx演示了如何用最原始的代码把redux应用到react项目中
   redux不是react特有的，redux可以用于任何JavaScript项目中，甚至可以用到vue中
   参考：E:\web\vue3\vue3study\redux_in_node
   使用方式和在E:\web\vue3\vue3study\redux_in_node中使用完全一样。
@@ -25,7 +28,8 @@ import Category from './pages/category'
   案例3：redux-thunk中间件实现异步请求
   看category.jsx中的方式3，搜索：“redux-thunk使用步骤”
 
-
+  案例4：react-devtools和redux-devtools-extension的使用
+  搜索“react-devtools和redux-devtools-extension的使用”（在./stroe/index.js里）
  */
 export class App extends PureComponent {
   constructor() {
