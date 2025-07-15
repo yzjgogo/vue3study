@@ -22,6 +22,8 @@ import Category from './pages/category'
   案例2涉及到category.jsx和about.jsx
   搜索：react-redux使用步骤
 
+  案例3：redux-thunk中间件实现异步请求
+  看category.jsx中的方式3，搜索：“redux-thunk使用步骤”
 
 
  */
