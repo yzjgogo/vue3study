@@ -1,18 +1,30 @@
 import React, { PureComponent } from 'react'
 import { connect } from "react-redux"
-import { changeBannersAction, changeRecommendsAction } from "../store/actionCreators"
+import { changeBannersAction, changeRecommendsAction, fetchHomeMultidataAction } from "../store/actionCreators"
 import axios from "axios"
 
 export class Category extends PureComponent {
 
   componentDidMount() {
-    console.log("Category组件挂载了")
-    const banners = [{title:'轮播0'},{title:'轮播1'},{title:'轮播2'}]
-    const recommends = [{title:'推荐0'},{title:'推荐1'},{title:'推荐2'}]
-    
-// react-redux使用步骤6：通过组件的属性方法更新store中的数据
-    this.props.changeBanners(banners)
-    this.props.changeRecommends(recommends)
+    //方式1：不使用网络数据，使用本地数据
+  // const banners = [{title:'轮播0'},{title:'轮播1'},{title:'轮播2'}]
+  // const recommends = [{title:'推荐0'},{title:'推荐1'},{title:'推荐2'}]
+  // this.props.changeBanners(banners)
+  // this.props.changeRecommends(recommends)
+
+    //方式2：使用网络请求来的数据，在这里（componentDidMount）发起网络请求时常规写法，但很多时候我们希望在给store使用dispatch方法时能够直接在actionCreators中请求数据。
+    // axios.get("http://123.207.32.32:8000/home/multidata").then(res => {
+    //   const banners = res.data.data.banner.list
+    //   const recommends = res.data.data.recommend.list
+    //   // react-redux使用步骤6：通过组件的属性方法更新store中的数据
+    //   this.props.changeBanners(banners)
+    //   this.props.changeRecommends(recommends)
+    // })
+
+    // 方式3：使用redux-thunk中间件来处理异步请求，搜索"redux-thunk使用步骤"
+    //redux-thunk使用步骤1:安装，npm install redux-thunk -S
+    //redux-thunk使用步骤5:通过组件属性方法来触发异步的fetchHomeMultidataAction方法
+    this.props.fetchHomeMultidata()
   }
 
   render() {
@@ -45,6 +57,10 @@ const mapDispatchToProps = (dispatch) => ({
   },
   changeRecommends(recommends) {
     dispatch(changeRecommendsAction(recommends))
+  },
+  // redux-thunk使用步骤4：把异步的fetchHomeMultidataAction方法映射为组件的属性方法，在使用redux-thunk之前store.dispatch(对象)，只允许传入对象，使用redux-thunk后可以传入函数，因为fetchHomeMultidataAction()返回一个函数
+  fetchHomeMultidata() {
+    dispatch(fetchHomeMultidataAction())
   }
 })
 /*

@@ -8,3 +8,5 @@
 7:hy-trip-tool 这个是修改了原教程项目的vue、pinia等版本，都是最新版，为了使用devtools 可以开发时查看数据，对比下package.json看看，另外两个hy-trip可以不看
 8：react
 9：react_scaffold
+10：redux_in_node
+11:react_redux

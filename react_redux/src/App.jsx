@@ -19,7 +19,10 @@ import Category from './pages/category'
   npm install react-redux -S
   然后我们就可以把store中的state中的某个属性映射为组件的属性；把dispatch方法映射为组件的属性方法。
   然后既可以在组件中通过this.props获取到state中的属性，也可以通过this.props方法来触发dispatch方法。
+  案例2涉及到category.jsx和about.jsx
   搜索：react-redux使用步骤
+
+
 
  */
 export class App extends PureComponent {
