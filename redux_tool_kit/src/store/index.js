@@ -10,6 +10,9 @@ import homeReducer from "./features/home"
   因此使用 @reduxjs/toolkit需要安装： @reduxjs/toolkit 和 react-redux
   安装命令：npm install @reduxjs/toolkit react-redux
 
+  注意：使用了@reduxjs/toolkit默认开启了redux-devtools-extension，因此不需要再手动配置。且也有了redux-thunk中间件。
+  但如果需要使用redux-thunk中间件，则需要手动配置。
+
   搜索：“@reduxjs/toolkit使用步骤”
 
   @reduxjs/toolkit使用步骤1:npm install @reduxjs/toolkit react-redux
