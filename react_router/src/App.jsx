@@ -3,6 +3,7 @@ import { Link, Navigate, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import HomeRecommend from "./pages/HomeRecommend"
 import HomeRanking from "./pages/HomeRanking"
+import HomeSongMenu from './pages/HomeSongMenu'
 import About from "./pages/About"
 import Login from "./pages/Login"
 // import Category from "./pages/Category"
@@ -39,6 +40,7 @@ export class App extends PureComponent {
             <Link to="/about">关于</Link>
             <Link to="/login">登录</Link>
 
+            {/* 分类和订单是为了演示代码跳转路由，看“App函数组件.jsx”里的“react路由使用步骤7函数式组件代码跳转路由使用hook函数useNavigate” */}
             <button>分类</button>
             <span>订单</span>
           </div>
@@ -56,6 +58,7 @@ export class App extends PureComponent {
               <Route path='/home' element={<Navigate to="/home/recommend"/>}/>
               <Route path='/home/recommend' element={<HomeRecommend/>}/>
               <Route path='/home/ranking' element={<HomeRanking/>}/>
+              <Route path='/home/songmenu' element={<HomeSongMenu/>}/>
             </Route>
             <Route path='/about' element={<About/>}/>
             <Route path='/login' element={<Login/>}/>
