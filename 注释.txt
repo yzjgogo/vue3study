@@ -10,3 +10,6 @@
 9：react_scaffold
 10：redux_in_node
 11:react_redux
+12:react_redux_middleware
+13:react_redux_modules
+14:redux_tool_kit
