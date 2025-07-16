@@ -20,6 +20,9 @@ const counterSlice = createSlice({
   reducers: {
     addNumber(state, { payload }) {
       //@reduxjs/toolkit使用步骤4:在模块的reducer函数中，直接修改state的值，而不需要返回新的state对象。
+      //为什么不需要像redux那样返回新的state对象？因为@reduxjs/toolkit使用了Immer库，Immer库会自动帮我们处理state的不可变性。
+      //https://github.com/immerjs/immer
+      //https://github.com/immutable-js/immutable-js
       state.counter = state.counter + payload
     },
     subNumber(state, { payload }) {

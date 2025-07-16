@@ -3,6 +3,10 @@ import ThemeContext from './context/theme-context'
 import UserContext from './context/user-context'
 
 export class HomeInfo extends Component {
+  //构造器的第2个参数就是context，里面包含了所有的Context数据
+  // constructor(props,context) {
+  //   super(props)
+  // }
   render() {
     // Context使用步骤4：就可以使用这个context了
     console.log(this.context)

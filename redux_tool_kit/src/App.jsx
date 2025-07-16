@@ -5,7 +5,10 @@ import Home from './pages/Home'
 import Profile from './pages/Profile'
 import "./style.css"
 /**
-  看‘redux_tool_kit\src\store\index.js’中的注释
+  这个redux_tool_kit项目主要学习两个知识点
+1：@reduxjs/toolkit的用法，具体看‘redux_tool_kit\src\store\index.js’中的注释
+2：自己实现react-redux的connect函数
+搜索“connect函数实现步骤”
  */
 export class App extends PureComponent {
   render() {

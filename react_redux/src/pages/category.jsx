@@ -69,5 +69,7 @@ react-redux使用步骤2：
 第二个参数是一个函数，用于映射dispatch到组件的props中。
 这样就可以在组件中通过this.props获取到state中的属性，也可以通过this.props方法来触发dispatch方法。
 注意：connect()返回值是一个高阶组件，使用时需要将其包裹在组件外面。
+
+其实connect方法的实现逻辑很简单，自己也可以实现，参考：E:\web\vue3\vue3study\redux_tool_kit\src\hoc
 */ 
 export default connect(mapStateToProps, mapDispatchToProps )(Category)

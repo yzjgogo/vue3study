@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { connect } from "react-redux"
+import { connect } from "../hoc"
 import { addNumber } from "../store/features/counter"
 
 export class About extends PureComponent {
@@ -9,6 +9,7 @@ export class About extends PureComponent {
     return (
       <div>
         <h2>About Counter: {counter}</h2>
+        <button onClick={e => this.props.addNumber(5)}>+5</button>
       </div>
     )
   }
