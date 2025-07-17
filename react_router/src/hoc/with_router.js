@@ -12,6 +12,7 @@ function withRouter(WrapperComponent) {
     const navigate = useNavigate()
 
     // 2.动态路由的参数: /detail/:id
+    //react路由使用步骤8':id'传参-3：因为useParams()是一个hook函数，所以只能在函数式组件中使用，所以需要把类组件包装成一个高阶组件,本传参案例中Detail这个类组件想在其内部拿到参数值，需要用withRouter高阶组件包装，之后就可以在其内部拿到params
     const params = useParams()
 
     // 3.查询字符串的参数: /user?name=why&age=18

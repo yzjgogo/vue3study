@@ -8,6 +8,7 @@ import About from "./pages/About"
 import Login from "./pages/Login"
 // import Category from "./pages/Category"
 // import Order from "./pages/Order"
+import Detail from './pages/Detail'
 import "./style.css"
 import NotFound from './pages/NotFound'
 
@@ -64,6 +65,8 @@ export class App extends PureComponent {
             <Route path='/login' element={<Login/>}/>
             {/* <Route path='/category' element={<Category/>}/>
             <Route path='/order' element={<Order/>}/> */}
+            {/* react路由使用步骤8':id'传参-1:在路由Route的path拼上:id,:xxx等 */}
+          <Route path='/detail/:id' element={<Detail/>}/>
             <Route path='*' element={<NotFound/>}/>
           </Routes>
         </div>
