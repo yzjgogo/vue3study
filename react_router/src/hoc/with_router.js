@@ -16,6 +16,7 @@ function withRouter(WrapperComponent) {
     const params = useParams()
 
     // 3.查询字符串的参数: /user?name=why&age=18
+    //react路由使用步骤8':查询传参-2:在函数式组件中可以通过useSearchParams()获取到查询参数,User组件想拿到查询参数需要通过withRouter高阶组件包装，然后传递给User组件。
     const location = useLocation()
     const [searchParams] = useSearchParams()
     const query = Object.fromEntries(searchParams)

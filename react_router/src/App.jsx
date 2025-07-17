@@ -9,6 +9,7 @@ import Login from "./pages/Login"
 // import Category from "./pages/Category"
 // import Order from "./pages/Order"
 import Detail from './pages/Detail'
+import User from './pages/User'
 import "./style.css"
 import NotFound from './pages/NotFound'
 
@@ -44,6 +45,8 @@ export class App extends PureComponent {
             {/* 分类和订单是为了演示代码跳转路由，看“App函数组件.jsx”里的“react路由使用步骤7函数式组件代码跳转路由使用hook函数useNavigate” */}
             <button>分类</button>
             <span>订单</span>
+            {/* react路由使用步骤8':查询传参-1：在路由跳转处(无论是Link还是代码跳转)，拼上查询参数 */}
+            <Link to="/user?name=why&age=18">用户</Link>
           </div>
           <hr />
         </div>
@@ -67,6 +70,7 @@ export class App extends PureComponent {
             <Route path='/order' element={<Order/>}/> */}
             {/* react路由使用步骤8':id'传参-1:在路由Route的path拼上:id,:xxx等 */}
           <Route path='/detail/:id' element={<Detail/>}/>
+          <Route path='/user' element={<User/>}/>
             <Route path='*' element={<NotFound/>}/>
           </Routes>
         </div>
