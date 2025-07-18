@@ -18,6 +18,7 @@ function CounterHook(props) {
   //hook用法步骤1：以useState为例，const arr = useState(初始值),参数是本次要定义的状态的默认值，返回值是一个有两个元素的数组？第一个元素就是当前的状态值，第二个元素使用于修改这个状态的函数；这里通过结构把arr[0]赋值给counter，arr[1]赋值给setCounter
   const [counter, setCounter] = useState(0)
   const [name] = useState("why")//一样的用法
+  const [banners, setBanners] = useState([])//用法一样
   console.log(name)
 
   // const message = useFoo()
