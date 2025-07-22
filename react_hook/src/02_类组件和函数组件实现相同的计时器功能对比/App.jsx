@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import CounterClass from './CounterClass'
 import CounterHook from './CounterHook'
 /**
-  这个案例主要演示，事项相同的功能
+  这个案例主要演示，实现相同的功能
   类组件CounterClass 和 函数组件CounterHook 的代码量，和便捷性对比
   其中CounterHook也介绍了hook的基本用法
 

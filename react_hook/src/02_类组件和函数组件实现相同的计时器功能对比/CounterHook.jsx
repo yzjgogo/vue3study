@@ -28,7 +28,7 @@ function CounterHook(props) {
       {/* hook用法步骤2：读取状态值 */}
       <h2>当前计数: {counter}</h2>
       
-      {/* hook用法步骤2：修改状态值 */}
+      {/* hook用法步骤2：修改状态值，会触发CounterHook重新执行（重新渲染） */}
       <button onClick={e => setCounter(counter+1)}>+1</button>
       <button onClick={e => setCounter(counter-1)}>-1</button>
     </div>

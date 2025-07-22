@@ -5,6 +5,10 @@ import ThemeContext from "./context/theme-context"
 import UserContext from './context/user-context'
 import Profile from './Profile'
 
+/**
+  E:\web\vue3\vue3study\react_hook\src\05_useContext的使用
+  这里将的是函数式组件中，使用useContext这种hook的方式
+ */
 export class App extends Component {
   constructor() {
     super()
