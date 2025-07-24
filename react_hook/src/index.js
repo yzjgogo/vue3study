@@ -13,7 +13,8 @@ import { UserContext, ThemeContext } from "./05_useContext的使用/context"
 // import App from "./07_useCallback_useRef的使用/App"
 // import App from "./08_useMemo的使用/App"
 // import App from "./09_useRef的使用/01_useRef绑定DOM"
-import App from "./10_useImperativeHandle/App"
+// import App from "./10_useImperativeHandle/App"
+import App from "./11_useLayoutEffect使用/01_layoutEffect和Effect时机"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // /*
