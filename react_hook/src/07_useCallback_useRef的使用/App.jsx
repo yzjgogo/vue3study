@@ -6,6 +6,8 @@ import React, { memo, useState, useCallback, useRef } from 'react'
   这里就是如何在App重新渲染时，避免HYHome重新渲染的问题；
 
   看下面一步步演变即可
+
+  对比useMemo:E:\web\vue3\vue3study\react_hook\src\08_useMemo的使用
 */
 const HYHome = memo(function(props) {
   const { increment } = props
