@@ -10,6 +10,8 @@ const App = memo(() => {
   //背景：无论vue还是react都是支持服务端渲染的，都有服务端渲染的api，且vue有框架nuxt，react有框架next
 
   //以后研究
+
+  //这个案例我没有执行，知道useId()的作用就行
   const id = useId()
   console.log(id)
 
